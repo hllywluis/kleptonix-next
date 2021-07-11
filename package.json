@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/abril-fatface": "^4.5.0",
+    "@fontsource/bungee": "^4.5.0",
+    "bootstrap": "^5.0.2",
     "next": "11.0.1",
+    "prisma": "^2.26.0",
     "react": "17.0.2",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
