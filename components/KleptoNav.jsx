@@ -10,7 +10,7 @@ const KleptoNav = props => {
     }
 
     const linkStyle = {
-        fontFamily: 'Abril Fatface'
+        fontFamily: 'Roboto Slab'
     }
 
     return (
