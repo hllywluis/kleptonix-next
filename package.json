@@ -15,12 +15,19 @@
     "@fontsource/montserrat": "^4.5.0",
     "@fontsource/roboto": "^4.5.0",
     "@fontsource/roboto-slab": "^4.5.0",
+    "@hapi/iron": "^6.0.0",
     "@prisma/client": "^2.27.0",
     "bootstrap": "^5.0.2",
+    "cookie": "^0.4.1",
     "next": "11.0.1",
+    "next-connect": "^0.10.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "17.0.2",
     "react-bootstrap": "^1.6.1",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "swr": "^0.5.6",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.0.1",

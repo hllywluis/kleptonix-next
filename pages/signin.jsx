@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import {useUser} from '../lib/hooks'
 
 import {Button, Container, Col, Form} from "react-bootstrap";
 
 const SignIn = props => {
+    useUser({redirectTo: '/', redirectIfFound: true})
+
     const logoStyle = {
         fontFamily: 'Bungee'
     }
