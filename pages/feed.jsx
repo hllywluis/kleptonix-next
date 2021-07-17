@@ -2,14 +2,14 @@ import Head from 'next/head'
 
 import {PrismaClient} from '@prisma/client'
 
-import {Container, Col, Row, Card} from 'react-bootstrap'
-
-import KleptoNav from '../components/KleptoNav'
+import {Container, Card} from 'react-bootstrap'
 
 export async function getServerSideProps() {
     const prisma = new PrismaClient()
 
     const posts = await prisma.posts.findMany()
+
+    prisma.$disconnect()
 
     return {
         props: {
@@ -36,7 +36,6 @@ const Feed = props => {
                 <meta name={'description'} content={'Where communities shine together.'}/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <KleptoNav/>
             <Container className={'d-flex justify-content-center'} fluid>
                 {posts.length === 0 && (
                     <>

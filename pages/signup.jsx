@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
-import {Button, Container, Col, Form} from "react-bootstrap";
+import {Button, Col, Container, Form} from "react-bootstrap";
 
-const SignIn = props => {
+const SignUp = props => {
     const logoStyle = {
         fontFamily: 'Bungee'
     }
@@ -14,13 +14,13 @@ const SignIn = props => {
     return (
         <>
             <Head>
-                <title>Kleptonix | Sign In</title>
-                <meta name={'description'} content={'Sign in to Kleptonix.'}/>
+                <title>Kleptonix | Sign Up</title>
+                <meta name={'description'} content={'Sign up for a Kleptonix account.'}/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <Container>
                 <Col className={'d-flex justify-content-center mt-5'}>
-                    <h2 style={headingStyle}>Sign In</h2>
+                    <h2 style={headingStyle}>Sign Up</h2>
                 </Col>
                 <Col className={'mt-5 mx-auto w-50'}>
                     <Form>
@@ -28,7 +28,7 @@ const SignIn = props => {
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type={'email'} placeholder={'luis@kleptonix.com'}/>
                             <Form.Text className={'text-muted'}>
-                                Enter your <span style={logoStyle}>KLEPTONIX</span> account email.
+                                Enter an email for your new <span style={logoStyle}>KLEPTONIX</span> account.
                             </Form.Text>
                         </Form.Group>
 
@@ -36,20 +36,28 @@ const SignIn = props => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type={'password'} placeholder={'Password'}/>
                             <Form.Text className={'text-muted'}>
-                                Enter the password for your account.
+                                Enter a password for your new account.
+                            </Form.Text>
+                        </Form.Group>
+
+                        <Form.Group className={'mb-3'} controlId={'formConfirmPassword'}>
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control type={'password'} placeholder={'Password Again'}/>
+                            <Form.Text className={'text-muted'}>
+                                Enter the password again to confirm it.
                             </Form.Text>
                         </Form.Group>
 
                         <div>
                             <Button className={'d-flex mt-5 mx-auto'} variant={'dark'} type={'submit'}>
-                                Sign In
+                                Sign Up
                             </Button>
                         </div>
                     </Form>
                 </Col>
                 <Col className={'d-flex mt-5'}>
                     <div className={'mx-auto'}>
-                        <p>No account yet? <a href={'/signup'} style={{color: 'black'}}>Sign Up</a>.</p>
+                        <p>Already have an account? <a href={'/signin'} style={{color: 'black'}}>Sign In</a>.</p>
                     </div>
                 </Col>
             </Container>
@@ -57,4 +65,4 @@ const SignIn = props => {
     )
 }
 
-export default SignIn
+export default SignUp

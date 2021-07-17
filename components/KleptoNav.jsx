@@ -26,7 +26,11 @@ const KleptoNav = props => {
                 </Col>
                 <Col className={'d-flex justify-content-end'}>
                     <Nav className={'ms-auto me-5'}>
-                        <Nav.Link active={router.pathname === '/signin'} style={linkStyle} href={'/signin'}>Sign In</Nav.Link>
+                        {router.pathname !== '/signup' && (
+                            <Nav.Link active={router.pathname === '/signin'} style={linkStyle} href={'/signin'}>Sign In</Nav.Link>
+                        ) || router.pathname === '/signup' && (
+                            <Nav.Link active={router.pathname === '/signup'} style={linkStyle} href={'/signup'}>Sign Up</Nav.Link>
+                        )}
                     </Nav>
                 </Col>
             </Container>
