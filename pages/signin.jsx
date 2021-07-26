@@ -3,7 +3,7 @@ import {useUser} from '../lib/hooks'
 
 import {Button, Container, Col, Form} from "react-bootstrap";
 
-const SignIn = props => {
+const SignIn = () => {
     useUser({redirectTo: '/', redirectIfFound: true})
 
     const logoStyle = {

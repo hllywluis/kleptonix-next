@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import {Button, Col, Container, Form} from "react-bootstrap";
 
-const SignUp = props => {
+const SignUp = () => {
     const logoStyle = {
         fontFamily: 'Bungee'
     }
